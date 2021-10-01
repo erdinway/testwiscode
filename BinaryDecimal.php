@@ -1,3 +1,7 @@
+<form method="post">
+    <input type="text" name="angka">
+    <input type="submit">
+</form>
 <?php
 
     function bin_to_dec($bin) {
@@ -15,6 +19,8 @@
     return $dec;
     }
 
-    echo bin_to_dec($_POST['angka']);
+    if(@$_POST['angka']){
+        echo bin_to_dec(@$_POST['angka']);
+    }
 
 ?>
